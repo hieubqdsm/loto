@@ -22,7 +22,7 @@ function removeItemOnce(arr, value) {
 }
 function changeTextColor(idbutton){
     let sellected_cell = document.getElementById(idbutton);
-    if(sellected_cell.style.color == "black"){
+    if(sellected_cell.style.color != "red"){
         sellected_cell.style.color = "red";
     }else{
         sellected_cell.style.color = "black";
