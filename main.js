@@ -20,6 +20,15 @@ function removeItemOnce(arr, value) {
     }
     return arr;
 }
+function changeTextColor(idbutton){
+    let sellected_cell = document.getElementById(idbutton);
+    if(sellected_cell.style.color == "black"){
+        sellected_cell.style.color = "red";
+    }else{
+        sellected_cell.style.color = "black";
+    }
+    
+}
 output_text += '<table style="width:100%">';
 for (let l = 0; l < 9; l++) {
     output_text += "<tr>";
@@ -72,7 +81,7 @@ for (let l = 0; l < 9; l++) {
     }
     for (let j = 0; j < render_array.length; j++) {
         if (render_array[j] != 0) {
-            output_text += '<td class="lotocell">' + render_array[j] + '</td>';
+            output_text += '<td class="lotocell" id="loto'+l+j+'" onClick=changeTextColor("loto'+l+j+'")>' + render_array[j] + '</td>';
         } else {
             output_text += '<td class="emptycell" name="emptycell"></td>';
         }
