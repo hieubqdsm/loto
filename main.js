@@ -81,7 +81,7 @@ for (let l = 0; l < 9; l++) {
     }
     for (let j = 0; j < render_array.length; j++) {
         if (render_array[j] != 0) {
-            output_text += '<td class="lotocell" id="loto'+l+j+'" onClick=changeTextColor("loto'+l+j+'")>' + render_array[j] + '</td>';
+            output_text += '<td name = "lotocells" class="lotocell" id="loto'+l+j+'" onClick=changeTextColor("loto'+l+j+'")>' + render_array[j] + '</td>';
         } else {
             output_text += '<td class="emptycell" name="emptycell"></td>';
         }
@@ -96,4 +96,10 @@ let emptycell = document.getElementsByName('emptycell');
 let randomColor = Math.floor(Math.random()*16777215).toString(16);
 for(let colorman = 0; colorman < emptycell.length; colorman++){
     emptycell[colorman].style.backgroundColor = "#"+randomColor;
+}
+function resetItem(){
+    let lotocells = document.getElementsByName('lotocells');
+    for(let colorman = 0; colorman < lotocells.length; colorman++){
+        lotocells[colorman].style.color = "black";
+    }
 }
