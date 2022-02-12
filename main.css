@@ -50,3 +50,30 @@ button{
     display: inline-block;
     font-size: 16px;
 }
+.lotobox{
+    padding: 5px;
+}
+.lotonum{
+    text-align: center;
+    font-size: 45px;
+    background-color: #4CAF50;
+    border: solid black 2px;
+    height: 55px;
+    width: 55px;
+    margin: 5px;
+    display: inline-block;
+}
+.resultbox{
+    margin: auto;
+}
+.resultnum{
+    background-color: #4CAF50;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+    font-size: 150px;
+    margin: auto;
+    border: solid 3px red;
+    color: red;
+}
